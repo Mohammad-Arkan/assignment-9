@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import {
     BoltIcon,
     Bars3BottomRightIcon,
@@ -10,7 +10,8 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     return (
         <div className='my-container'>
-            <div className='flex items-center justify-between w-3/4 mx-auto'>
+            <div className=''>
+                <div className='flex items-center justify-between w-3/4 mx-auto'>
                 <div>
                     <h1 className='jobworld'>JobWorld</h1>
                 </div>
@@ -42,6 +43,8 @@ const Header = () => {
                 <div>
                     <button className='btn'>Star Applying</button>
                 </div>
+                </div>
+                
                  {/* Mobile Navbar Section */}
         <div className='lg:hidden'>
           {/* Dropdown Open Button */}
