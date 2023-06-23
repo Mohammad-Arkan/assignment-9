@@ -1,51 +1,62 @@
-import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 import {
-    BoltIcon,
-    Bars3BottomRightIcon,
-    XMarkIcon,
-  } from '@heroicons/react/24/solid'
+  Bars3BottomRightIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/solid'
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
-    return (
-        <div className='my-container'>
-            <div className=''>
-                <div className='flex items-center justify-between w-3/4 mx-auto'>
-                <div>
-                    <h1 className='jobworld'>JobWorld</h1>
-                </div>
-                <div>
-                    <ul className='flex items-center justify-center gap-5'>
-                        <li>
-                            <NavLink to="/" 
-                              className={({ isActive }) => (isActive ? 'active' : 'default')}
-                            >Home</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/statistics" 
-                              className={({ isActive }) => (isActive ? 'active' : 'default')}
-                            >Statistics</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/appliedjobs" 
-                              className={({ isActive }) => (isActive ? 'active' : 'default')}
-                            >Applied Job</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/blog" 
-                              className={({ isActive }) => (isActive ? 'active' : 'default')}
-                            >Blog</NavLink>
-                        </li>
-                       
-                    </ul>
-                </div>
-                <div>
-                    <button className='btn'>Star Applying</button>
-                </div>
-                </div>
-                
-                 {/* Mobile Navbar Section */}
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  return (
+    <div className='bg-gray-100 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
+      <div className='relative flex items-center justify-between'>
+        {/* Logo Section */}
+        <Link to='/' className='inline-flex items-center'>
+          
+          <span className='gradient'>
+            JobWorld
+          </span>
+        </Link>
+
+        {/* Nav Items Section */}
+        <ul className='items-center hidden space-x-8 lg:flex'>
+          <li>
+            <NavLink
+              to='/'
+              className={({ isActive }) => (isActive ? 'active' : 'default')}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to='/statistics'
+              className={({ isActive }) => (isActive ? 'active' : 'default')}
+            >
+              Statistics
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to='/applied'
+              className={({ isActive }) => (isActive ? 'active' : 'default')}
+            >
+              Applied Jobs
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to='/blog'
+              className={({ isActive }) => (isActive ? 'active' : 'default')}
+            >
+              Blog
+            </NavLink>
+          </li>
+        </ul>
+        <div className=''>
+          <button className='btn'>Star Applying</button>
+        </div>
+        {/* Mobile Navbar Section */}
         <div className='lg:hidden'>
           {/* Dropdown Open Button */}
           <button
@@ -61,10 +72,9 @@ const Header = () => {
                 {/* Logo & Button section */}
                 <div className='flex items-center justify-between mb-4'>
                   <div>
-                    <Link to='/' className='inline-flex items-center'>
-                      <BoltIcon className='h-6 w-6 text-blue-500' />
-                      <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
-                        nextPage
+                    <Link to='/' className='inline-flex items-center'>                    
+                      <span className=' text-xl font-bold tracking-wide text-gray-800 uppercase'>
+                      JobWorld
                       </span>
                     </Link>
                   </div>
@@ -89,18 +99,26 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        to='/books'
+                        to='/statistics'
                         className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
                       >
-                        Books
+                        Statistics
                       </Link>
                     </li>
                     <li>
                       <Link
-                        to='/about'
+                        to='/applied'
                         className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
                       >
-                        About Us
+                       Applied Jobs
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to='/blog'
+                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
+                      >
+                      Blog
                       </Link>
                     </li>
                   </ul>
@@ -109,9 +127,9 @@ const Header = () => {
             </div>
           )}
         </div>
-            </div>
-        </div>
-    );
-};
+      </div>
+    </div>
+  )
+}
 
-export default Header;
+export default Header
