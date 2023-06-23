@@ -5,7 +5,9 @@ const Header = () => {
     return (
         <div className='my-container'>
             <div className='flex items-center justify-between'>
-                <div>JobWorld</div>
+                <div>
+                    <h1 className='jobworld'>JobWorld</h1>
+                </div>
                 <div>
                     <ul className='flex items-center justify-center gap-5'>
                         <li>
