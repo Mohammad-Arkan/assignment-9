@@ -8,18 +8,19 @@ import {
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   return (
-    <div className='bg-gray-100 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
+    // px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20
+    <div className='my-container'>
       <div className='relative flex items-center justify-between'>
         {/* Logo Section */}
         <Link to='/' className='inline-flex items-center'>
           
-          <span className='gradient'>
+          <span className='ml-2 text-xl font-bold tracking-wide text-gray-800'>
             JobWorld
           </span>
         </Link>
 
         {/* Nav Items Section */}
-        <ul className='items-center hidden space-x-8 lg:flex'>
+        <ul className='items-center hidden space-x-5 lg:flex'>
           <li>
             <NavLink
               to='/'
