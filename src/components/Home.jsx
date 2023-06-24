@@ -32,12 +32,17 @@ const Home = () => {
       </div>
       {/* Lottie Animation */}
       <div className='relative lg:w-1/2 w-full'>
-      
           <img className='ml-20' src={hero} alt="" />
-    
       </div> 
       </div>
-      
+           <div> 
+              <div className='w-60% mx-auto mt-24 text-center'>
+                <h3 className='font-bold mb-4 text-4xl'>Job Category List</h3>
+                <p className='text-base text-gray-500'>Explore thousands of job opportunities with all the information you need. Its your future</p>
+              </div>
+            <div></div>
+            </div>
+            <div className='my-container'></div>
     </div>
       
   )
