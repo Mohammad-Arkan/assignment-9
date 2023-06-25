@@ -1,14 +1,20 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { useLoaderData } from 'react-router-dom';
 
 const Job = ({job}) => {
-    const {logo, title, jobs} = job
+    const jobs = useLoaderData()
+    console.log(jobs)
+    const {img, title, Salary, location, category, id, company} = job
     return (
-        <div>       
-            <FontAwesomeIcon className='h-10 w-10 lg:mb-7 md:mb-4' icon={faEnvelope} />
-            <h4 className='font-bold text-xl'> {title}</h4>
-            <p className='text-gray-500'>{jobs}</p>
+        <div className='grid gap-6 mb-8 lg:grid-cols-2 sm:grid-cols-1'>
+            <div className='w-30% ml-20'> 
+                 <img className='h-16 w-60 mx-auto block' src={img} alt="company image"/>
+                 <h3 className='block text-2xl font-bold lg:mt-5 sm:mt:3'>{title}</h3>
+                 <h5 className='text-xl font-semibold text-gray-500'>{company}</h5>
+            </div>
+            
+           
+    
         </div>
     );
 };
