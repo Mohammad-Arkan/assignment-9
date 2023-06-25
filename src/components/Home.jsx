@@ -75,7 +75,7 @@ const Home = () => {
                 <h3 className='font-bold mb-4 text-4xl '>Featured Jobs</h3>
                 <p className='text-base text-gray-500'>Explore thousands of job opportunities with all the information you need. Its your future</p>
               </div>
-                 <div className='grid gap-6 mb-8 lg:grid-cols-2 sm:grid-cols-1 lg:mb-16 md:mb:10 mx-auto'>
+                 <div className='grid gap-6 mb-8 lg:grid-cols-2 sm:grid-cols-1 lg:mb-16 mx-auto'>
                       {
                       jobs.map(job => <Job
                       key={job.id}
