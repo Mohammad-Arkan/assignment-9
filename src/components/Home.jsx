@@ -3,8 +3,7 @@ import hero from '../assets/img/hero-1.jpg'
 import { Link, useLoaderData } from 'react-router-dom'
 import Job from './Job'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFileInvoice } from '@fortawesome/free-solid-svg-icons'
-import { faLightbulbOn } from '@fortawesome/free-solid-svg-icons'
+import { faChartSimple, faFileInvoice, faLightbulbOn, faStarfighterTwinIonEngineAdvanced } from '@fortawesome/free-solid-svg-icons'
 
 // faLightbulbOn
 
@@ -58,12 +57,14 @@ const Home = () => {
                   <p className='text-gray-500'>300 Jobs Available</p>
               </div>
               <div>
-                  <FontAwesomeIcon className='h-10 w-10 lg:mb-7 md:mb-4' icon={faEnvelope} />  
+              <FontAwesomeIcon className='h-10 w-10 lg:mb-7 md:mb-4'icon={faChartSimple} />
+                 
                   <h4 className='font-bold text-xl'>Account & Finance</h4>
                   <p className='text-gray-500'>300 Jobs Available</p>
               </div>
               <div>
-                  <FontAwesomeIcon className='h-10 w-10 lg:mb-7 md:mb-4' icon={faEnvelope} />  
+              {/* faStarfighterTwinIonEngineAdvanced */}
+              <FontAwesomeIcon className='h-10 w-10 lg:mb-7 md:mb-4' icon={faStarfighterTwinIonEngineAdvanced} />
                   <h4 className='font-bold text-xl'>Account & Finance</h4>
                   <p className='text-gray-500'>300 Jobs Available</p>
               </div>
