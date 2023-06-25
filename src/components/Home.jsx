@@ -36,7 +36,7 @@ const Home = () => {
       </div> 
       </div>
            <div> 
-              <div className='w-60% mx-auto mt-24 text-center'>
+              <div className='w-60% mx-auto mt-24 text-center mb-8'>
                 <h3 className='font-bold mb-4 text-4xl'>Job Category List</h3>
                 <p className='text-base text-gray-500'>Explore thousands of job opportunities with all the information you need. Its your future</p>
               </div>
